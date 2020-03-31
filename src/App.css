@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  cursor: pointer;
+  background-color: crimson;
+  color: cornflowerblue;
+}
+#download-btn {
+  border: 1px solid white;
+  border-radius: 30px;
+  background: teal;
+  width: 12%;
+  padding-left: 14px;
+  color: white;
+  height: 2em;
+  padding-top: 6px;
+}
+
+.section1 {
+  height: 35em;
+  display: flex;
+  flex-direction: row;
+  margin-top: 130px;
+  justify-content: space-between;
+}
+
+.description {
+  width: 40%;
+  margin: 0 auto;
+}
+.image {
+  width: 40%;
+  margin: 0 auto;
+}
+.pics {
+  height: 32em;
+  width: 30em;
+  border-radius: 35px;
+}
+
+.google {
+  width: 12em;
+  margin-right: 8px;
+  margin-top: 50px;
+}
+#mail {
+  border-radius: 22px;
+  height: 4em;
+  margin-right: 8px;
+  width: 20em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+#submit {
+  border-radius: 22px;
+  height: 3em;
+  margin-right: 8px;
+  width: 10em;
+  background-color: teal;
+  font-size: 15px;
+  outline: none;
+}
+.lead {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Roboto;
+}
+.sub-text {
+  font-family: Roboto;
+  font-size: 25px;
+}
+
+.second-text {
+  font-family: Raleway;
+  line-height: 2;
+  color: gray;
+}
+
+.section2 {
+  height: 20em;
+  margin-top: 15em;
+}
+
+.narration,
+.narration1,
+.narration2 {
+  margin: 0 auto;
+  width: 75%;
+}
+.schedule {
+  font-family: Roboto;
+  font-size: 30px;
+}
+
+.txt {
+  line-height: 2;
+  font-family: Raleway;
+  color: gray;
+  font-size: 22px;
+  text-align: center;
+}
+.emoji {
+  width: 80px;
+  margin-top: 100px;
+}
+
+.section3 {
+  height: 60em;
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lorem {
+  width: 30%;
+  /* background-color: red; */
+}
+
+.lorem2 {
+  width: 75%;
+}
+.money1,
+.money2,
+.money3,
+.money4 {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  height: 50px;
+  margin-right: 350px;
+}
+
+.dollar {
+  width: 80px;
+}
+
+.dollar2 {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.desc {
+  font-family: Raleway;
+  font-size: 22px;
+  width: 16em;
+  line-height: 1.6;
+}
+
+.direction {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.direction2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 480px;
+  /* justify-content: space-between; */
+}
+
+.section5 {
+  margin-top: 120px;
+  height: 50em;
+}
+.lorem1 {
+  margin: 0 auto;
+}
+
+.global {
+  font-size: 30px;
+  font-family: Roboto;
+}
+
+.picture {
+  width: 80%;
+  margin-top: 80px;
+  display: flex;
+  margin-left: 125px;
+  border-radius: 30px;
+}
+
+.footer {
+  background-color: blueviolet;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 3em 1em;
+  font-size: 0.9375rem;
+  color: white;
+}
+
+.footer > div ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.footer > div ul li {
+  padding-top: 5px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* RESPONSIVENESS OF LANDING PAGE */
+@media (max-width: 500px) {
+  header {
+    height: 220px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: solid;
+  }
+}
+
+@media (max-width: 500px) {
+  #contact,
+  #sign {
+    margin-bottom: 10px;
+    border-bottom: solid;
+  }
+}
+
+@media (max-width: 500px) {
+  nav a {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  #download-btn,
+  .emoji,
+  .lorem {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #about,
+  #pricing,
+  #home {
+    margin-bottom: 10px;
+    border-bottom: solid;
+  }
+}
+
+@media (max-width: 500px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    height: 68em;
+  }
+}
+
+@media (max-width: 500px) {
+  .description {
+    width: 90%;
+    height: 50em;
+  }
+}
+
+@media (max-width: 500px) {
+  .lead,
+  .sub-text,
+  .second-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand,
+  form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .pics {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section2 {
+    height: 40em;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .narration {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .txt1 {
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .txt {
+    display: flex;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .section3 {
+    margin-top: 270px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90em;
+  }
+}
+
+@media (max-width: 500px) {
+  .direction,
+  .direction2 {
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: cyan;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 30em;
+    padding-top: -50em; */
+  }
+}
+
+@media (max-width: 500px) {
+  .lorem2 {
+    width: 100%;
+    height: 170em;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    /* margin-top: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 80em; */
+  }
+}
+
+@media (max-width: 500px) {
+  .section4 {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 40em;
+  }
+}
+
+@media (max-width: 500px) {
+  .money1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 30em;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 500px) {
+  .desc,
+  .dollar {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .money2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20em;
+  }
+}
+
+@media (max-width: 500px) {
+  .money3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -300px;
+    width: 100%;
+    height: 20em;
+  }
+}
+
+@media (max-width: 500px) {
+  .money4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20em;
+  }
+}
+
+@media (max-width: 500px) {
+  .narration1 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .narration2 {
+    display: flex;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .picture {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    /* font-size: 8px; */
+    padding-left: 8px;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    /* justify-content: space-between; */
+    /* margin: 0 auto; */
+    vertical-align: top;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .join h3 {
+    font-size: 14px;
+  }
+} */
+
+@media (max-width: 500px) {
+  .join {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    height: 100px;
+    margin-left: -2px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .company {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    height: 140px;
+    margin-left: -4px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .help {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    height: 140px;
+    margin-left: -3px;
+    margin-right: -4px;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .join ul li {
+    padding-bottom: 10px;
+  }
+} */
+
+@media (max-width: 500px) {
+  .contact {
+    margin-left: -20px;
+    margin-right: 10px;
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .con {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    height: 120px;
+    margin-left: -8px;
+    margin-right: 5px;
+  }
+}
