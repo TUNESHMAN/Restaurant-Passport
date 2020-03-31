@@ -2,10 +2,13 @@ import React from "react";
 import Restaurant from "../images/Restaurant.jpg";
 import Cheese from "../images/Cheese.png";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+
 
 function Home() {
   return (
     <React.Fragment>
+      <NavBar />
       <section className="section1">
         <div className="description">
           <h2 className="lead">Restaurant Passport</h2>
