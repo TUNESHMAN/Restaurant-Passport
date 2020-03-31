@@ -10,20 +10,13 @@ function NavBar() {
             >ABOUT US</a
           >
           <a href="http://" target="_blank" rel="noopener noreferrer" id="pricing"
-            >PRICING</a
+            >CITIES/RESTAURANTS</a
           >
           <a href="http://" target="_blank" rel="noopener noreferrer" id="sign"
-            >SIGN UP</a
+            >SIGN UP/SIGN IN</a
           >
           <a href="http://" target="_blank" rel="noopener noreferrer" id="contact"
             >CONTACT</a
-          >
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            id="download-btn"
-            >DOWNLOAD</a
           >
         </nav>
       </header>
