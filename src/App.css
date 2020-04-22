@@ -561,3 +561,41 @@ nav a:hover {
     margin-right: 5px;
   }
 }
+
+.wrapper {
+  background: cornflowerblue;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 60px 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.wrapper .title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.wrapper .form .input-field{
+position: relative;
+margin-bottom: 10px;
+}
+.wrapper .form .input-field .input{
+  width: 100%;
+  padding: 12px;
+  padding-left: 30px;
+  border: none;
+  background: #eeeeee;
+}
+
+.wrapper .form .form-btn{
+  width: 70%;
+  margin: 20px auto 0;
+  padding: 12px;
+  text-align: center;
+}
