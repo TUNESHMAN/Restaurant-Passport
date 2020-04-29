@@ -1,12 +1,17 @@
 import React from "react";
-import axios from "axios";
-import Dashboard from "../components/Dashboard"
+import { connect } from "react-redux";
+import { getCity } from "../state/Actions/cityAction";
 
-
-function Cities() {
-  return (
-    <Dashboard/>
-  );
+function Cities(props) {
+  return <div>{!props.city && <h2>There is no city</h2>}</div>;
 }
 
-export default Cities;
+const mapStateToProp = (state) => {
+  return {
+    isFetching: state.isFetching,
+    error: state.error,
+    city: state.city,
+  };
+};
+
+export default connect(mapStateToProp, { getCity })(Cities);

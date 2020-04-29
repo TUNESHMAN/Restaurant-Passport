@@ -3,6 +3,7 @@ import { Layout, Avatar, Menu, Icon, Breadcrumb, Button, Modal } from "antd";
 import Title from "antd/lib/typography/Title";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Addcity } from "./Addcity";
+import Cities from "../pages/Cities";
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -74,7 +75,7 @@ function Dashboard(props) {
                 </Breadcrumb.Item>
               </Breadcrumb>
               <div style={{ background: "#fff", padding: 24, minHeight: 580 }}>
-                Content
+                <Cities/>
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>Cities</Footer>

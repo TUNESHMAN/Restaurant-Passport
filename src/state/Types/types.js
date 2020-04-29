@@ -1,0 +1,1 @@
+export const FETCH_CITY_START = "FETCH_CITY_START";

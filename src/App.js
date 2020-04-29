@@ -10,6 +10,7 @@ import Restaurants from "./pages/Restaurants";
 import About from "./pages/About";
 import PrivateRoute from "./components/PrivateRoute";
 import { Addcity } from "./components/Addcity";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route exact path="/register" component={Signup} />
         <Route exact path="/login" component={SignIn} />
         <Route exact path="/about" component={About} />
-        <PrivateRoute exact path="/cities" component={Cities} />
+        <PrivateRoute exact path="/cities" component={Dashboard} />
         <PrivateRoute exact path="/add/cities" component={Addcity} />
         <PrivateRoute exact path="/cities/restaurants" component={Restaurants} />
         <Route component={Error} />
