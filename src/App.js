@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Restaurants from "./pages/Restaurants";
 import About from "./pages/About";
+import PrivateRoute from "./components/PrivateRoute";
+import { Addcity } from "./components/Addcity";
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
         <Route exact path="/register" component={Signup} />
         <Route exact path="/login" component={SignIn} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/cities" component={Cities} />
-        <Route exact path="/cities/restaurants" component={Restaurants} />
+        <PrivateRoute exact path="/cities" component={Cities} />
+        <PrivateRoute exact path="/add/cities" component={Addcity} />
+        <PrivateRoute exact path="/cities/restaurants" component={Restaurants} />
         <Route component={Error} />
       </Switch>
     </div>

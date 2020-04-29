@@ -1,13 +1,11 @@
 import React from "react";
 import axios from "axios";
-import NavBar from "../components/NavBar";
+import Dashboard from "../components/Dashboard"
+
 
 function Cities() {
   return (
-    <div>
-      <NavBar />
-      <h1>Hello from cities</h1>
-    </div>
+    <Dashboard/>
   );
 }
 

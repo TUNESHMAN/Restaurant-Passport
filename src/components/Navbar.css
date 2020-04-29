@@ -1,0 +1,27 @@
+header {
+  width: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  cursor: pointer;
+  background-color: crimson;
+  color: cornflowerblue;
+}
