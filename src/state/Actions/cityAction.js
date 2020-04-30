@@ -16,7 +16,7 @@ export const getCity = () => (dispatch) => {
 
       dispatch({
         type: FETCH_CITY_SUCCESS,
-        payload: res,
+        payload: res.data,
       });
     })
     .catch((error) => {

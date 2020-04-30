@@ -23,12 +23,14 @@ const SignIn = (props) => {
             loginDetails
           )
           .then((res) => {
+            console.log(res.data.token);
             setLoading(false);
             message.success(`You are logged in successfully`, 1.2);
-            localStorage.setItem(`token`, res.token);
+            localStorage.setItem(`token`, res.data.token);
             props.history.push("/cities");
           })
           .catch((error) => {
+            console.log(error);
             setLoading(false);
             message.error(
               `Unsuccessful login attempt, please register or try again!`,

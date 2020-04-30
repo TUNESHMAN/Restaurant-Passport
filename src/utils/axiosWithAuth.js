@@ -4,7 +4,7 @@ export const axiosWithAuth = () => {
     // configuration object
     baseURL: "https://build-restaurant-passport1.herokuapp.com/",
     headers: {
-      authentication: localStorage.getItem("token")
-    }
+      authentication: localStorage.getItem(`token`),
+    },
   });
 };
