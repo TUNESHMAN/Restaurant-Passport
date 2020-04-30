@@ -1,9 +1,9 @@
-import { FETCH_CITY_START } from "../Types/types";
+import { FETCH_CITY_START, FETCH_CITY_SUCCESS } from "../Types/types";
 
 const initialState = {
   isFetching: false,
   error: "",
-  city: [],
+  city: null,
 };
 
 const cityReducer = (state = initialState, action) => {
@@ -12,6 +12,12 @@ const cityReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: true,
+      };
+
+    case FETCH_CITY_SUCCESS:
+      return {
+        ...state,
+        city: action.payload,
       };
 
     default:

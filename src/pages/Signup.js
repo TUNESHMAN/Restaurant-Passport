@@ -20,7 +20,7 @@ const Signup = (props) => {
         message.loading(`Registration in progress...`, 1.5);
         axios
           .post(
-            `https://build-restaurant-passport.herokuapp.com/users/register`,
+            `https://build-restaurant-passport1.herokuapp.com/users/register`,
             registerDetails
           )
           .then((res) => {
