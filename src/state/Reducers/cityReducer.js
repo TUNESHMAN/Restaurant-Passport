@@ -3,7 +3,7 @@ import { FETCH_CITY_START, FETCH_CITY_SUCCESS } from "../Types/types";
 const initialState = {
   isFetching: false,
   error: "",
-  city: null,
+  city: [],
 };
 
 const cityReducer = (state = initialState, action) => {
@@ -17,6 +17,7 @@ const cityReducer = (state = initialState, action) => {
     case FETCH_CITY_SUCCESS:
       return {
         ...state,
+        isFetching: false,
         city: action.payload,
       };
 

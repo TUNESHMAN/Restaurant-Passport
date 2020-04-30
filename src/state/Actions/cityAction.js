@@ -12,7 +12,7 @@ export const getCity = () => (dispatch) => {
   axiosWithAuth()
     .get(`/cities`)
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
 
       dispatch({
         type: FETCH_CITY_SUCCESS,
