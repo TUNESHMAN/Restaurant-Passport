@@ -4,6 +4,8 @@ import Title from "antd/lib/typography/Title";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Addcity } from "./Addcity";
 import Cities from "../pages/Cities";
+import WrappedNormalLoginForm from "../components/Addcity";
+import Logo from "../images/image.png";
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -27,7 +29,7 @@ function Dashboard(props) {
         <Header style={{ padding: "10px" }}>
           <Avatar icon="user" style={{ float: "right" }} />
           <Title style={{ color: "white", marginLeft: "900px" }} level={3}>
-            {/* <img src={Logo} /> */}
+            {/* <img src={Logo} alt="logo" /> */}
             RestaurantPassport
           </Title>
         </Header>
@@ -62,7 +64,7 @@ function Dashboard(props) {
                   destroyOnClose={true}
                   footer={null}
                 >
-                  <Addcity toggleModal={toggleModal} />
+                  <WrappedNormalLoginForm toggleModal={toggleModal} />
                 </Modal>
               </SubMenu>
             </Menu>
@@ -75,7 +77,7 @@ function Dashboard(props) {
                 </Breadcrumb.Item>
               </Breadcrumb>
               <div style={{ background: "#fff", padding: 24, minHeight: 580 }}>
-                <Cities/>
+                <Cities />
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>Cities</Footer>

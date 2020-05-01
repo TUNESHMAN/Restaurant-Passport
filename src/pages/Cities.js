@@ -8,8 +8,6 @@ import "./Styles.css";
 const { Meta } = Card;
 
 function Cities(props) {
-  console.log(props);
-
   useEffect(() => {
     props.getCity();
   }, []);
@@ -29,7 +27,7 @@ function Cities(props) {
                 <Col span={8}>
                   <Card
                     hoverable
-                    style={{ width: 240, borderRadius: "8px" }}
+                    style={{ width: 300, borderRadius: "8px" }}
                     cover={<img alt="globe" src={globe} />}
                   >
                     <p>
