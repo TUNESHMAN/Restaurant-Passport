@@ -4,7 +4,7 @@ const initialState = {
   isFetching: false,
   error: "",
   city: [],
-//   cityData: {},
+  //   cityData: {},
 };
 
 const cityReducer = (state = initialState, action) => {
@@ -23,9 +23,12 @@ const cityReducer = (state = initialState, action) => {
       };
 
     case ADD_CITY:
+      const newCity = state.city.concat(action.payload);
+      console.log(newCity);
+
       return {
         ...state,
-        city: [...state.city, action.payload],
+        city: newCity,
       };
 
     default:

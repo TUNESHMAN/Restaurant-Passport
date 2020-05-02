@@ -11,9 +11,11 @@ export const Addcity = (props) => {
     e.preventDefault();
     props.form.validateFieldsAndScroll((error, values) => {
       const cityPayload = {
-        city: values.city,
+        name: values.name,
       };
       if (!error) {
+        console.log(cityPayload);
+        
         props.toggleModal();
         props.addCity(cityPayload);
         props.getCity();
@@ -26,7 +28,7 @@ export const Addcity = (props) => {
   return (
     <Form onSubmit={handleSubmit} className="login-form">
       <Form.Item>
-        {getFieldDecorator("city", {
+        {getFieldDecorator("name", {
           //rules are for the form validation
           rules: [
             { required: true, message: "Name of city" },
@@ -37,7 +39,7 @@ export const Addcity = (props) => {
           ],
         })(
           <Input
-            name="city"
+            name="name"
             //form icon in the email field, change type for different icons, see antdesign docs
             prefix={<Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />}
             placeholder="City"
