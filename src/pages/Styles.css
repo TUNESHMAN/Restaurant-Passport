@@ -12,6 +12,7 @@
 }
 
 .site-card-wrapper {
+  display: flex;
   background: #ececec;
   padding: 30px;
 }

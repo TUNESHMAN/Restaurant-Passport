@@ -7,6 +7,7 @@ import Cities from "./pages/Cities";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Restaurants from "./pages/Restaurants";
+import AddRestaurant from "./components/AddRestaurant";
 import About from "./pages/About";
 import PrivateRoute from "./components/PrivateRoute";
 import { Addcity } from "./components/Addcity";
@@ -21,8 +22,17 @@ function App() {
         <Route exact path="/login" component={SignIn} />
         <Route exact path="/about" component={About} />
         <PrivateRoute exact path="/cities" component={Dashboard} />
+        <PrivateRoute
+          exact
+          path="/cities/restaurants"
+          component={AddRestaurant}
+        />
         <PrivateRoute exact path="/add/cities" component={Addcity} />
-        <PrivateRoute exact path="/cities/restaurants" component={Restaurants} />
+        <PrivateRoute
+          exact
+          path="/cities/restaurants"
+          component={Restaurants}
+        />
         <Route component={Error} />
       </Switch>
     </div>

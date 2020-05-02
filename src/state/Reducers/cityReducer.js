@@ -4,7 +4,6 @@ const initialState = {
   isFetching: false,
   error: "",
   city: [],
-  //   cityData: {},
 };
 
 const cityReducer = (state = initialState, action) => {

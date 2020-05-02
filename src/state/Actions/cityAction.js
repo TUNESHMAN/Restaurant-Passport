@@ -37,3 +37,14 @@ export const addCity = (cityPayload) => (dispatch) => {
       console.log(err);
     });
 };
+
+export const postRestaurant = (restaurantPayload) => (dispatch) => {
+  axiosWithAuth()
+    .post(`/cities/restaurants`, restaurantPayload)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};

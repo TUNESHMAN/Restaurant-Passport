@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getCity } from "../state/Actions/cityAction";
-import { Spin, Card, Row, Col } from "antd";
+import { Spin, Card } from "antd";
 import globe from "../images/globe.jpg";
+import { PlusOutlined, EyeOutlined, DeleteOutlined } from "@ant-design/icons";
 import "./Styles.css";
 
 const { Meta } = Card;
@@ -23,20 +24,27 @@ function Cities(props) {
         <div>
           {props.city.map((rest) => (
             <div className="site-card-wrapper">
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card
-                    hoverable
-                    style={{ width: 300, borderRadius: "8px" }}
-                    cover={<img alt="globe" src={globe} />}
-                  >
-                    <p>
-                      <span className="cityDesc">City:</span>
-                      <span className="cityName">{rest.name}</span>
-                    </p>
-                  </Card>
-                </Col>
-              </Row>
+              {/* <Row gutter={16}> */}
+              {/* <Col span={8}> */}
+              <Card
+                hoverable
+                style={{ width: 300, borderRadius: "8px" }}
+                cover={<img alt="globe" src={globe} />}
+                actions={[
+                  // <PlusOutlined key="plus" />,
+                  <p>Add a Restaurant</p>,
+                  <p>View Restaurants</p>,
+
+                  // <EyeOutlined key="eye" />,
+                ]}
+              >
+                <p>
+                  <span className="cityDesc">City:</span>
+                  <span className="cityName">{rest.name}</span>
+                </p>
+              </Card>
+              {/* </Col> */}
+              {/* </Row> */}
             </div>
           ))}
         </div>
