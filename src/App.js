@@ -27,12 +27,12 @@ function App() {
           path="/cities/restaurants"
           component={AddRestaurant}
         />
-        <PrivateRoute exact path="/add/cities" component={Addcity} />
         <PrivateRoute
           exact
-          path="/cities/restaurants"
+          path="/cities/restaurant"
           component={Restaurants}
         />
+        <PrivateRoute exact path="/add/cities" component={Addcity} />
         <Route component={Error} />
       </Switch>
     </div>

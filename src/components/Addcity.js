@@ -61,7 +61,6 @@ const mapStateToProp = (state) => {
     isFetching: state.cityList.isFetching,
     error: state.cityList.error,
     city: state.cityList.city,
-    // cityData: state.cityList.cityData
   };
 };
 

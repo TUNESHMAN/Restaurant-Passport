@@ -2,18 +2,25 @@ import React, { useState } from "react";
 import { Layout, Avatar, Menu, Icon, Breadcrumb, Button, Modal } from "antd";
 import Title from "antd/lib/typography/Title";
 import SubMenu from "antd/lib/menu/SubMenu";
-import { Addcity } from "./Addcity";
 import Cities from "../pages/Cities";
 import WrappedNormalLoginForm from "../components/Addcity";
+import WrappedNormalForm from "../components/AddRestaurant";
+import { useHistory } from "react-router-dom";
 import Logo from "../images/image.png";
 
 const { Header, Sider, Content, Footer } = Layout;
 
 function Dashboard(props) {
+  let history = useHistory();
   const [visible, setVisible] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleModal = () => {
     setVisible(!visible);
+  };
+
+  const toggleCity = () => {
+    setShow(!show);
   };
 
   const handleOk = () => {
@@ -22,6 +29,19 @@ function Dashboard(props) {
 
   const handleCancel = () => {
     setVisible(false);
+  };
+
+  const handleCityCancel = () => {
+    setShow(false);
+  };
+
+  const handleCityOk = () => {
+    setShow(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear(`token`);
+    history.push(`/`);
   };
   return (
     <div className="App">
@@ -57,7 +77,7 @@ function Dashboard(props) {
                 }
               >
                 <Modal
-                  title="Add a prescription"
+                  title="Add a City"
                   visible={visible}
                   onOk={handleOk}
                   onCancel={handleCancel}
@@ -67,6 +87,33 @@ function Dashboard(props) {
                   <WrappedNormalLoginForm toggleModal={toggleModal} />
                 </Modal>
               </SubMenu>
+              <SubMenu
+                title={
+                  <span>
+                    <Button onClick={toggleCity}>Add Restaurant</Button>
+                  </span>
+                }
+              >
+                <Modal
+                  title="Add a Restaurant"
+                  visible={show}
+                  onOk={handleCityOk}
+                  onCancel={handleCityCancel}
+                  destroyOnClose={true}
+                  footer={null}
+                >
+                  <WrappedNormalForm toggleCity={toggleCity} />
+                </Modal>
+              </SubMenu>
+              <SubMenu
+                title={
+                  <span>
+                    <Button type="danger" onClick={handleLogout}>
+                      Log out
+                    </Button>
+                  </span>
+                }
+              ></SubMenu>
             </Menu>
           </Sider>
           <Layout>

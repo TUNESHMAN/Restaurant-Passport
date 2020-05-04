@@ -9,9 +9,9 @@ function NavBar() {
         <nav>
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT US</NavLink>
-          <NavLink to="/cities">CITIES</NavLink>
+          {/* <NavLink to="/cities">CITIES</NavLink> */}
           <NavLink to="/register">SIGN UP/SIGN IN</NavLink>
-          <NavLink to="/cities/restaurants">RESTAURANTS</NavLink>
+          {/* <NavLink to="/cities/restaurants">RESTAURANTS</NavLink> */}
         </nav>
       </header>
     </div>

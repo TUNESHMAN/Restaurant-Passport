@@ -24,3 +24,8 @@
 .cityDesc {
   font-family: "Raleway", sans-serif;
 }
+
+.card-wrapper {
+  background: #ececec;
+  padding: 30px;
+}

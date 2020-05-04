@@ -1,9 +1,14 @@
-import { ADD_RESTAURANT } from "../Types/types";
+import {
+  ADD_RESTAURANT,
+  GET_RESTAURANT_START,
+  GET_RESTAURANT,
+} from "../Types/types";
 
 const initialState = {
   fetching: false,
   error: "",
-  restaurant: [],
+  restaurantInfo: {},
+//   name: "",
 };
 
 const restaurantReducer = (state = initialState, action) => {
@@ -11,7 +16,18 @@ const restaurantReducer = (state = initialState, action) => {
     case ADD_RESTAURANT:
       return {
         ...state,
-        restaurant: []
+        restaurantInfo: {},
+      };
+    case GET_RESTAURANT_START:
+      return {
+        ...state,
+        fetching: true,
+      };
+    case GET_RESTAURANT:
+      return {
+        ...state,
+        fetching: false,
+        restaurantInfo: action.payload,
       };
 
     default:

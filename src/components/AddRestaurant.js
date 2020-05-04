@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Input, Icon, Button, InputNumber } from "antd";
-import NavBar from "./NavBar";
 import { postRestaurant } from "../state/Actions/cityAction";
 import { connect } from "react-redux";
 
@@ -21,6 +20,7 @@ function AddRestaurant(props) {
         description: values.description,
       };
       if (!error) {
+        props.toggleCity();
         props.postRestaurant(restaurantPayload);
       } else {
       }
@@ -30,7 +30,6 @@ function AddRestaurant(props) {
 
   return (
     <div>
-      <NavBar />
       <Form onSubmit={handleSubmit}>
         <Form.Item>
           {getFieldDecorator("name", {
@@ -146,9 +145,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(
-  AddRestaurant
-);
-export default connect(mapStateToProps, { postRestaurant })(
-  WrappedNormalLoginForm
-);
+const WrappedNormalForm = Form.create({ name: "normal_login" })(AddRestaurant);
+export default connect(mapStateToProps, { postRestaurant })(WrappedNormalForm);
