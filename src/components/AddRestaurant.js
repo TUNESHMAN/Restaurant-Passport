@@ -129,7 +129,7 @@ function AddRestaurant(props) {
 
         <Form.Item>
           <Button type="primary " htmlType="submit">
-            ADD A RESTAURANT
+            ADD RESTAURANT
           </Button>
         </Form.Item>
       </Form>

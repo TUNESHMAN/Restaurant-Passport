@@ -5,7 +5,8 @@ import SubMenu from "antd/lib/menu/SubMenu";
 import Cities from "../pages/Cities";
 import WrappedNormalLoginForm from "../components/Addcity";
 import WrappedNormalForm from "../components/AddRestaurant";
-import { useHistory } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
+import "./form.css";
 import Logo from "../images/image.png";
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -46,30 +47,35 @@ function Dashboard(props) {
   return (
     <div className="App">
       <Layout>
-        <Header style={{ padding: "10px" }}>
+        <Header style={{ padding: "10px", backgroundColor: "white" }}>
           <Avatar icon="user" style={{ float: "right" }} />
           <Title style={{ color: "white", marginLeft: "900px" }} level={3}>
-            {/* <img src={Logo} alt="logo" /> */}
-            RestaurantPassport
+            <NavLink to="/">
+              <img src={Logo} alt="logo" className="logo" />
+            </NavLink>
           </Title>
         </Header>
         <Layout>
           <Sider style={{ background: "teal" }}>
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <Menu.Item key="Dashboard">Dashboard</Menu.Item>
+
+              <Menu.Item key="home">
+                <NavLink to="/" className="add-btn1">
+                  <Icon type="home" />
+                  <span>Home</span>
+                </NavLink>
+              </Menu.Item>
               <SubMenu
+                className="add-btn"
                 title={
                   <span>
-                    <Icon type="mail" /> <span>About us</span>
+                    <Icon type="info" /> <span>About us</span>
                   </span>
                 }
-              >
-                <Menu.ItemGroup key="about us" title="Country 1">
-                  <Menu.Item key="location1">Location 1</Menu.Item>
-                  <Menu.Item key="location2">Location 2</Menu.Item>
-                </Menu.ItemGroup>
-              </SubMenu>
+              ></SubMenu>
               <SubMenu
+                className="add-btn"
                 title={
                   <span>
                     <Button onClick={toggleModal}>Add City</Button>
@@ -88,6 +94,7 @@ function Dashboard(props) {
                 </Modal>
               </SubMenu>
               <SubMenu
+                className="add-btn"
                 title={
                   <span>
                     <Button onClick={toggleCity}>Add Restaurant</Button>
@@ -106,6 +113,7 @@ function Dashboard(props) {
                 </Modal>
               </SubMenu>
               <SubMenu
+                className="logout"
                 title={
                   <span>
                     <Button type="danger" onClick={handleLogout}>
@@ -120,14 +128,23 @@ function Dashboard(props) {
             <Content style={{ padding: "0 50px" }}>
               <Breadcrumb style={{ margin: "16px 0" }}>
                 <Breadcrumb.Item>
-                  <h1>Cities & Restaurants</h1>
+                  <h1 className="city-header">Cities on your passport</h1>
                 </Breadcrumb.Item>
               </Breadcrumb>
-              <div style={{ background: "#fff", padding: 24, minHeight: 580 }}>
+              <div
+                style={{
+                  background: "#fff",
+                  padding: 24,
+                  minHeight: 580,
+                  width: "100%",
+                }}
+              >
                 <Cities />
               </div>
             </Content>
-            <Footer style={{ textAlign: "center" }}>Cities</Footer>
+            <Footer style={{ textAlign: "center" }}>
+              <p className="base">&copy;2020. Use RestaurantPassport. All right reserved</p>
+            </Footer>
           </Layout>
         </Layout>
       </Layout>

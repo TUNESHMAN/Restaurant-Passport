@@ -3,7 +3,8 @@ import "antd/dist/antd.css";
 import { Form, Icon, Input, Button, message, Spin } from "antd";
 import "./form.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import FormHeader from "../components/FormHeader";
 
 const SignIn = (props) => {
   const [loading, setLoading] = useState(false);
@@ -43,8 +44,11 @@ const SignIn = (props) => {
   };
   const { getFieldDecorator } = props.form;
   return (
-    <div className="form-div">
+    <div className="backgroundStyle">
+      <FormHeader/>
+      <div >
       <Spin spinning={loading}>
+        <h1>Login</h1>
         <Form onSubmit={handleSubmit} className="login-form">
           <Form.Item>
             {getFieldDecorator("username", {
@@ -97,12 +101,15 @@ const SignIn = (props) => {
             >
               Login
             </Button>
-            Don't have an account?
-            <Link to="/register"> Sign-up here!</Link>
+           <span className="question"> Don't have an account?</span> 
+            <NavLink to="/register" className="login-link"> Sign-up here!</NavLink>
           </Form.Item>
         </Form>
       </Spin>
     </div>
+
+    </div>
+    
   );
 };
 const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(SignIn);

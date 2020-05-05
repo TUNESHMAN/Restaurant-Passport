@@ -30,26 +30,24 @@ function Cities(props) {
         </div>
       )}
       {props.city && !props.isFetching && (
-        <div>
+        <div className="city-card">
           {props.city.map((rest) => (
             <div className="site-card-wrapper">
-              {/* <Row gutter={16}> */}
-              {/* <Col span={8}> */}
               <Card
                 key={rest.id}
                 hoverable
-                style={{ width: 300, borderRadius: "8px" }}
+                style={{
+                  width: 300,
+                  borderRadius: "12px",
+                  marginBottom: "18px",
+                }}
                 cover={<img alt="globe" src={globe} />}
                 actions={[
-                  // <PlusOutlined key="plus" />,
-                  // <p>Add a Restaurant</p>,
-                  // <>View Restaurants</>,
-
                   <EyeOutlined key="eye" onClick={() => handleView(rest.id)} />,
                 ]}
               >
                 <p>
-                  <span className="cityDesc">City:</span>
+                  {/* <span className="cityDesc">City:</span> */}
                   <span className="cityName">{rest.name}</span>
                 </p>
               </Card>
