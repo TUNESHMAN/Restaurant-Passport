@@ -63,6 +63,9 @@ body {
   -moz-box-shadow: none;
   box-shadow: none;
   outline: none;
+  font-family: Raleway;
+  font-weight: bold;
+  /* font-size: 15px; */
 }
 
 #submit {
@@ -73,6 +76,8 @@ body {
   background-color: teal;
   font-size: 15px;
   outline: none;
+  font-family: Roboto;
+  font-weight: bold;
 }
 .lead {
   font-weight: bold;
@@ -92,7 +97,7 @@ body {
 
 .section2 {
   height: 20em;
-  margin-top: 15em;
+  margin-top: 5em;
 }
 
 .narration,
@@ -106,6 +111,14 @@ body {
   font-size: 30px;
 }
 
+.schedule1{
+  font-family: Roboto;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
 .txt {
   line-height: 2;
   font-family: Raleway;
@@ -115,8 +128,12 @@ body {
 }
 .emoji {
   width: 80px;
-  margin-top: 100px;
 }
+
+/* .emoji1 {
+  width: 80px;
+  margin-top: 1px;
+} */
 
 .section3 {
   height: 60em;
@@ -161,6 +178,8 @@ body {
   line-height: 1.6;
 }
 
+
+
 .direction {
   display: flex;
   flex-direction: row;
@@ -175,7 +194,7 @@ body {
 }
 
 .section5 {
-  margin-top: 120px;
+  margin-top: 40px;
   height: 50em;
 }
 .lorem1 {
@@ -189,7 +208,7 @@ body {
 
 .picture {
   width: 80%;
-  margin-top: 80px;
+  margin-top: 30px;
   display: flex;
   margin-left: 125px;
   border-radius: 30px;
@@ -554,11 +573,11 @@ body {
   font-size: 26px;
   font-weight: bold;
 }
-.wrapper .form .input-field{
-position: relative;
-margin-bottom: 10px;
+.wrapper .form .input-field {
+  position: relative;
+  margin-bottom: 10px;
 }
-.wrapper .form .input-field .input{
+.wrapper .form .input-field .input {
   width: 100%;
   padding: 12px;
   padding-left: 30px;
@@ -566,7 +585,7 @@ margin-bottom: 10px;
   background: #eeeeee;
 }
 
-.wrapper .form .form-btn{
+.wrapper .form .form-btn {
   width: 70%;
   margin: 20px auto 0;
   padding: 12px;
