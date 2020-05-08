@@ -3,7 +3,6 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Signup from "./pages/Signup";
 import SignIn from "./pages/SignIn";
-import Cities from "./pages/Cities";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Restaurants from "./pages/Restaurants";

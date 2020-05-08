@@ -18,54 +18,41 @@ function Restaurants(props) {
         </Menu.Item>
       </Menu>
       <div className="no-rest">
-        {!props.restaurantInfo.restaurants && !props.fetching && (
-          <h2 className="zero-rest">No restaurant in this city</h2>
-        )}
-        {props.fetching && (
+        {props.fetching ? (
           <div className="loader">
             <Spin spinning={props.fetching} style={{ color: "white" }} />
           </div>
-        )}
-        {props.restaurantInfo.restaurants && !props.fetching && (
-          <div>
-            {props.restaurantInfo.restaurants && !props.fetching && (
-              <div className="rest-card">
-                {props.restaurantInfo.restaurants.map((restaurant) => (
-                  <div className="rest-wrapper">
-                    <Card
-                      //   bordered={false}
-                      style={{
-                        width: 300,
-                        marginTop: "12px",
-                        marginLeft: "15px",
-                        marginRight: "15px",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      <p>
-                        <span className="rest-name">Restaurant Name:</span>
-                        <span className="rest-add"> {restaurant.restName}</span>
-                      </p>
-                      <p>
-                        <span className="rest-name">
-                          Address of Restaurant:
-                        </span>
-                        <span className="rest-add">
-                          {" "}
-                          {restaurant.restAddress}
-                        </span>
-                      </p>
-                      <p>
-                        <span className="rest-name">
-                          Description of Restaurant
-                        </span>
-                        <span className="rest-add"> {restaurant.restDesc}</span>
-                      </p>
-                    </Card>
-                  </div>
-                ))}
+        ) : props.restaurantInfo.restaurants === undefined ||
+          props.restaurantInfo.restaurants.length === 0 ? (
+          <h2 className="zero-rest">No restaurant in this city</h2>
+        ) : (
+          <div className="rest-card">
+            {props.restaurantInfo.restaurants.map((restaurant) => (
+              <div className="rest-wrapper">
+                <Card
+                  style={{
+                    width: 300,
+                    marginTop: "12px",
+                    marginLeft: "15px",
+                    marginRight: "15px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  <p>
+                    <span className="rest-name">Restaurant Name:</span>
+                    <span className="rest-add"> {restaurant.restName}</span>
+                  </p>
+                  <p>
+                    <span className="rest-name">Address of Restaurant:</span>
+                    <span className="rest-add"> {restaurant.restAddress}</span>
+                  </p>
+                  <p>
+                    <span className="rest-name">Description of Restaurant</span>
+                    <span className="rest-add"> {restaurant.restDesc}</span>
+                  </p>
+                </Card>
               </div>
-            )}
+            ))}
           </div>
         )}
       </div>

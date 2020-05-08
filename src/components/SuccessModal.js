@@ -1,16 +1,15 @@
-import React, {useState} from "react";
-import { Modal, Button } from "antd";
+import { Modal } from "antd";
 
 function SuccessModal() {
   let secondsToGo = 30;
   const modal = Modal.success({
     title: "You have successfully added a restaurant",
-    content: `This modal will be destroyed after ${secondsToGo} second.`,
+    content: `Please click on the city to view it.`,
   });
   const timer = setInterval(() => {
     secondsToGo -= 1;
     modal.update({
-      content: `This modal will be destroyed after ${secondsToGo} second.`,
+      content: `Please click on the city to view it.`,
     });
   }, 1000);
   setTimeout(() => {
@@ -20,5 +19,3 @@ function SuccessModal() {
 }
 
 export default SuccessModal;
-
-

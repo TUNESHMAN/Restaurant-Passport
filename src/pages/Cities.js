@@ -7,14 +7,10 @@ import { EyeOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
 import "./Styles.css";
 
-const { Meta } = Card;
-
 function Cities(props) {
   let history = useHistory();
-  console.log(props);
 
   const handleView = (id) => {
-    console.log(`clicked`);
     history.push(`/cities/restaurant`);
     props.getRestaurant(id);
   };

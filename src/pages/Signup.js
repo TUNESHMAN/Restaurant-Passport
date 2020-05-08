@@ -26,7 +26,7 @@ const Signup = (props) => {
           )
           .then((res) => {
             setLoading(false);
-            message.success(`You are successfully registeres`, 1.2);
+            message.success(`You are successfully registered`, 1.2);
             props.history.push("/login");
           })
           .catch((error) => {

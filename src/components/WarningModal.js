@@ -1,16 +1,15 @@
-import React from "react";
-import { Modal, Button } from "antd";
+import { Modal} from "antd";
 
 function WarningModal() {
-  let secondsToGo = 5;
+  let secondsToGo = 20;
   const modal = Modal.error({
     title: "Sorry, the restaurant details could not be added. Please try again!",
-    content: `This modal will be destroyed after ${secondsToGo} second.`,
+    content: `Please check that the restaurant doesn't already exist`,
   });
   const timer = setInterval(() => {
     secondsToGo -= 1;
     modal.update({
-      content: `This modal will be destroyed after ${secondsToGo} second.`,
+      content: `Please check that the restaurant doesn't already exist`,
     });
   }, 1000);
   setTimeout(() => {

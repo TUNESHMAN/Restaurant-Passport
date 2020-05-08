@@ -4,7 +4,6 @@ import {
   FETCH_CITY_FAILURE,
   GET_RESTAURANT_START,
   GET_RESTAURANT,
-  ADD_CITY,
 } from "../Types/types";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
 import SuccessModal from "../../components/SuccessModal";
@@ -17,7 +16,6 @@ export const getCity = () => (dispatch) => {
   axiosWithAuth()
     .get(`/cities`)
     .then((res) => {
-      console.log(res.data);
       dispatch({
         type: FETCH_CITY_SUCCESS,
         payload: res.data,
@@ -58,13 +56,10 @@ export const getRestaurant = (id) => (dispatch) => {
   axiosWithAuth()
     .get(`/cities/${id}/restaurants`)
     .then((res) => {
-      console.log(res.data);
       dispatch({
         type: GET_RESTAURANT,
         payload: res.data,
       });
     })
-    .catch((error) => {
-      console.log(error);
-    });
+    .catch((error) => {});
 };
