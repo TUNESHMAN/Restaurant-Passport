@@ -2,22 +2,31 @@ import React from "react";
 import { getRestaurant } from "../state/Actions/cityAction";
 import { connect } from "react-redux";
 import { Spin, Card, Menu, Icon } from "antd";
-// import SubMenu from "antd/lib/menu/SubMenu";
 import { NavLink } from "react-router-dom";
+import bg from "../images/bg.jpg";
 import "./rest.css";
+import { AlignLeftOutlined } from "@ant-design/icons";
 
 function Restaurants(props) {
   return (
-    <div className="rest-side">
-      <Menu>
-        <Menu.Item key="home">
-          <NavLink to="/cities" className="back-nav">
-            <Icon type="left" />
-            <span className="back">Back to Cities</span>
-          </NavLink>
-        </Menu.Item>
-      </Menu>
-      <div className="no-rest">
+    <div>
+      <div className="rest-side">
+        <ul>
+          <li>
+            <NavLink className="path" to="/cities">Back to Cities</NavLink>
+          </li>
+          <li>
+            <NavLink className="path" to="/about">About us</NavLink>
+          </li>
+          <li>
+            <NavLink className="path" to="/">Home</NavLink>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        className="no-rest"
+      >
         {props.fetching ? (
           <div className="loader">
             <Spin spinning={props.fetching} style={{ color: "white" }} />
@@ -36,6 +45,8 @@ function Restaurants(props) {
                     marginLeft: "15px",
                     marginRight: "15px",
                     marginBottom: "12px",
+                    borderRadius: "12px",
+                    backgroundColor:"teal"
                   }}
                 >
                   <p>
@@ -65,7 +76,6 @@ const mapStateToProps = (state) => {
     fetching: state.restaurantList.fetching,
     error: state.restaurantList.error,
     restaurantInfo: state.restaurantList.restaurantInfo,
-    // name: state.restaurantList.name,
   };
 };
 

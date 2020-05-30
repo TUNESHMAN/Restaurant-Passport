@@ -14,7 +14,7 @@ function Home() {
   };
 
   return (
-    <React.Fragment>
+    <div>
       <NavBar />
       <section className="section1">
         <div className="description">
@@ -36,10 +36,10 @@ function Home() {
               GET STARTED
             </button>
           </form>
-          <div className="brand">
+          {/* <div className="brand">
             <img className="google" src={google} alt="google" />
             <img className="google" src={apple} alt="apple" />
-          </div>
+          </div> */}
         </div>
 
         <div className="image">
@@ -98,7 +98,7 @@ function Home() {
         </div>
       </section>
       <div>{/* <Footer /> */}</div>
-    </React.Fragment>
+    </div>
   );
 }
 
