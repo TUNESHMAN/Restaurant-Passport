@@ -70,7 +70,9 @@ function Dashboard(props) {
                 className="add-btn"
                 title={
                   <span>
-                    <Icon type="info" /> <span>About us</span>
+                    <NavLink to="/about">
+                      <Icon type="info" /> <span>About us</span>
+                    </NavLink>
                   </span>
                 }
               ></SubMenu>
@@ -143,7 +145,9 @@ function Dashboard(props) {
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>
-              <p className="base">&copy;2020. Use RestaurantPassport. All right reserved</p>
+              <p className="base">
+                &copy;2020. Use RestaurantPassport. All right reserved
+              </p>
             </Footer>
           </Layout>
         </Layout>

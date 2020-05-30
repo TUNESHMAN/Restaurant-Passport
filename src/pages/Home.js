@@ -23,17 +23,6 @@ function Home() {
             made in every city. Creat an account, login with your details, and
             explore today.
           </p>
-          {/* <form>
-            <input
-              type="email"
-              placeholder="Ready to create a passport?"
-              id="mail"
-            />
-            <button onClick={handleClick} id="submit">
-              {" "}
-              GET STARTED
-            </button>
-          </form> */}
         </div>
 
         <div className="image">

@@ -33,6 +33,7 @@ body {
   flex-direction: row;
   margin-top: 130px;
   justify-content: space-between;
+  margin-left: 70px;
 }
 
 .description {
@@ -591,4 +592,48 @@ body {
   margin: 20px auto 0;
   padding: 12px;
   text-align: center;
+}
+
+.abt-sec1{
+  display: flex;
+  background: blueviolet;
+  align-content: center;
+  min-height: 300px;
+}
+
+.abt-div1{
+  margin: 0 auto;
+  /* background: red; */
+  width: 60%;
+  padding-top: 60px;
+}
+
+.abt-head{
+  font-family: Roboto;
+  font-size: 30px;
+  color: white;
+  padding-left: 200px;
+}
+
+.abt-para{
+  font-family: Raleway;
+  font-size: 18px;
+  color: white;
+  padding-left: 70px;
+}
+.abt-sec2{
+  display: flex;
+  align-content: center;
+}
+.abt-div2{
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.abt-para2{
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 2.5;
+  font-weight: bolder;
 }

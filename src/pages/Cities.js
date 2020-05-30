@@ -43,12 +43,9 @@ function Cities(props) {
                 ]}
               >
                 <p>
-                  {/* <span className="cityDesc">City:</span> */}
                   <span className="cityName">{rest.name}</span>
                 </p>
               </Card>
-              {/* </Col> */}
-              {/* </Row> */}
             </div>
           ))}
         </div>
