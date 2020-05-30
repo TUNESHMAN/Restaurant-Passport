@@ -2,8 +2,6 @@ import React from "react";
 import Restaurant from "../images/Restaurant.jpg";
 import Cheese from "../images/Cheese.png";
 import NavBar from "../components/NavBar";
-import google from "../images/google.svg";
-import apple from "../images/apple.svg";
 import world from "../images/world.jpg";
 import { useHistory } from "react-router-dom";
 
@@ -21,11 +19,11 @@ function Home() {
           <h2 className="lead">Restaurant Passport</h2>
           <p className="sub-text">Find a restaurant close to you</p>
           <p className="second-text">
-            RestaurantPassport gives let's you know where the best meals are
+            Restaurant Passport let's you know where the best meals are
             made in every city. Creat an account, login with your details, and
             explore today.
           </p>
-          <form>
+          {/* <form>
             <input
               type="email"
               placeholder="Ready to create a passport?"
@@ -35,11 +33,7 @@ function Home() {
               {" "}
               GET STARTED
             </button>
-          </form>
-          {/* <div className="brand">
-            <img className="google" src={google} alt="google" />
-            <img className="google" src={apple} alt="apple" />
-          </div> */}
+          </form> */}
         </div>
 
         <div className="image">

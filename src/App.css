@@ -7,9 +7,9 @@ body {
 }
 body {
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
-  background: white;
+  background: black;
 }
 
 * {
@@ -80,19 +80,20 @@ body {
   font-weight: bold;
 }
 .lead {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 30px;
   font-family: Roboto;
 }
 .sub-text {
   font-family: Roboto;
   font-size: 25px;
+  color: blueviolet;
 }
 
 .second-text {
   font-family: Raleway;
   line-height: 2;
-  color: gray;
+  font-size: 25px
 }
 
 .section2 {
