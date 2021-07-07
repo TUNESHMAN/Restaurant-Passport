@@ -7,42 +7,14 @@ body {
 }
 body {
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
-  background: white;
 }
 
 * {
   box-sizing: border-box;
 }
 
-header {
-  width: auto;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-}
-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-}
-
-nav a {
-  display: flex;
-  text-decoration: none;
-  color: black;
-  padding: 5px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  cursor: pointer;
-  background-color: crimson;
-  color: cornflowerblue;
-}
 #download-btn {
   border: 1px solid white;
   border-radius: 30px;
@@ -60,6 +32,7 @@ nav a:hover {
   flex-direction: row;
   margin-top: 130px;
   justify-content: space-between;
+  margin-left: 70px;
 }
 
 .description {
@@ -90,6 +63,9 @@ nav a:hover {
   -moz-box-shadow: none;
   box-shadow: none;
   outline: none;
+  font-family: Raleway;
+  font-weight: bold;
+  /* font-size: 15px; */
 }
 
 #submit {
@@ -100,26 +76,29 @@ nav a:hover {
   background-color: teal;
   font-size: 15px;
   outline: none;
+  font-family: Roboto;
+  font-weight: bold;
 }
 .lead {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 30px;
   font-family: Roboto;
 }
 .sub-text {
   font-family: Roboto;
   font-size: 25px;
+  color: blueviolet;
 }
 
 .second-text {
   font-family: Raleway;
   line-height: 2;
-  color: gray;
+  font-size: 25px
 }
 
 .section2 {
   height: 20em;
-  margin-top: 15em;
+  margin-top: 5em;
 }
 
 .narration,
@@ -133,6 +112,14 @@ nav a:hover {
   font-size: 30px;
 }
 
+.schedule1{
+  font-family: Roboto;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
 .txt {
   line-height: 2;
   font-family: Raleway;
@@ -142,8 +129,12 @@ nav a:hover {
 }
 .emoji {
   width: 80px;
-  margin-top: 100px;
 }
+
+/* .emoji1 {
+  width: 80px;
+  margin-top: 1px;
+} */
 
 .section3 {
   height: 60em;
@@ -188,6 +179,8 @@ nav a:hover {
   line-height: 1.6;
 }
 
+
+
 .direction {
   display: flex;
   flex-direction: row;
@@ -202,7 +195,7 @@ nav a:hover {
 }
 
 .section5 {
-  margin-top: 120px;
+  margin-top: 40px;
   height: 50em;
 }
 .lorem1 {
@@ -216,7 +209,7 @@ nav a:hover {
 
 .picture {
   width: 80%;
-  margin-top: 80px;
+  margin-top: 30px;
   display: flex;
   margin-left: 125px;
   border-radius: 30px;
@@ -560,4 +553,86 @@ nav a:hover {
     margin-left: -8px;
     margin-right: 5px;
   }
+}
+
+.wrapper {
+  background: cornflowerblue;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 60px 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.wrapper .title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.wrapper .form .input-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.wrapper .form .input-field .input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 30px;
+  border: none;
+  background: #eeeeee;
+}
+
+.wrapper .form .form-btn {
+  width: 70%;
+  margin: 20px auto 0;
+  padding: 12px;
+  text-align: center;
+}
+
+.abt-sec1{
+  display: flex;
+  background: blueviolet;
+  align-content: center;
+  min-height: 300px;
+}
+
+.abt-div1{
+  margin: 0 auto;
+  /* background: red; */
+  width: 60%;
+  padding-top: 60px;
+}
+
+.abt-head{
+  font-family: Roboto;
+  font-size: 30px;
+  color: white;
+  padding-left: 200px;
+}
+
+.abt-para{
+  font-family: Raleway;
+  font-size: 18px;
+  color: white;
+  padding-left: 70px;
+}
+.abt-sec2{
+  display: flex;
+  align-content: center;
+}
+.abt-div2{
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.abt-para2{
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 2.5;
+  font-weight: bolder;
 }

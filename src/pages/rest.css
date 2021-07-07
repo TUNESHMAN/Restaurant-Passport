@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.rest-side {
+  height: 100%;
+  left: 0;
+  width: 250px;
+  position: fixed;
+  background: #042331;
+}
+
+/* .rest-side ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+} */
+
+.path {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+
+.path:hover {
+  padding-left: 50px;
+  color: aqua;
+}
+
+.no-rest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rest-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 70px;
+  justify-content: space-between;
+  margin-left: 250px;
+}
+
+.loader {
+  margin-top: 100px;
+}
+
+.zero-rest{
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+.rest-name {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+.rest-add {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+

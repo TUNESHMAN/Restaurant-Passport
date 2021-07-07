@@ -1,0 +1,44 @@
+.spin {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+  margin-top: 90px;
+}
+.spin {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* .site-card-wrapper {
+  display: flex;
+  background: #ececec;
+  padding: 30px;
+} */
+
+.cityName {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 17px;
+}
+
+.cityDesc {
+  font-family: "Raleway", sans-serif;
+}
+
+.card-wrapper {
+  background: #ececec;
+  padding: 30px;
+}
+
+.city-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: space-between;
+  background: #ececec;
+}
